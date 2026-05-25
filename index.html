@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Arya Tambe — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- Noise overlay -->
+<div class="noise"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="logo">
+      <span class="logo-letter">A</span><span class="logo-letter accent">T</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about" data-label="About">About</a></li>
+      <li><a href="#skills" data-label="Skills">Skills</a></li>
+      <li><a href="#projects" data-label="Projects">Projects</a></li>
+      <li><a href="#contact" data-label="Contact">Contact</a></li>
+    </ul>
+    <div class="nav-line"></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="grid-lines"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="badge-wrap">
+        <span class="badge-dot"></span>
+        <span class="badge-text">B.Tech Student · MIT ADT Pune</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="title-line title-line-1">I'm</span>
+        <span class="title-line title-line-2 name-highlight">Arya<br>Tambe</span>
+      </h1>
+
+      <p class="hero-sub">Cloud Computing · Software Engineering</p>
+
+      <div class="hero-email">
+        <i class="fa-solid fa-envelope"></i>
+        <span>arya.tambe5427@gmail.com</span>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">
+          <span>View Projects</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn-ghost">Let's Connect</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="photo-frame">
+        <div class="photo-ring ring-1"></div>
+        <div class="photo-ring ring-2"></div>
+        <div class="photo-inner">
+          <img src="./assets/profile-ai.png" alt="Arya Tambe" onerror="this.style.display='none'">
+          <div class="photo-initials">AT</div>
+        </div>
+        <div class="floating-pill pill-1">
+          <i class="fa-brands fa-aws"></i> AWS
+        </div>
+        <div class="floating-pill pill-2">
+          <i class="fa-brands fa-java"></i> Java
+        </div>
+        <div class="floating-pill pill-3">
+          <i class="fa-solid fa-cloud"></i> Cloud
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section about-section">
+  <div class="container">
+    <div class="section-label">
+      <span class="label-num">01</span>
+      <span class="label-text">About</span>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text-col">
+        <h2 class="section-title">Who <em>I Am</em></h2>
+        <p class="about-body">
+          I'm Arya Tambe, a Bachelor of Technology student at MIT ADT University, Pune, specialising in <strong>Cloud Computing</strong>. I'm passionate about software engineering, cloud technologies, and crafting elegant solutions to complex problems.
+        </p>
+        <p class="about-body">
+          My focus is on continuous learning and building technology that makes a genuine impact — from scalable cloud architectures to thoughtful code.
+        </p>
+      </div>
+
+      <div class="about-cards-col">
+        <div class="info-card edu-card">
+          <div class="card-icon">🎓</div>
+          <div class="card-body">
+            <h4>Education</h4>
+            <p>MIT ADT University, Pune</p>
+            <p class="card-detail">B.Tech · Cloud Computing</p>
+          </div>
+        </div>
+
+        <div class="info-card str-card">
+          <div class="card-icon">⚡</div>
+          <div class="card-body">
+            <h4>Core Strengths</h4>
+            <ul class="strength-list">
+              <li>Programming</li>
+              <li>Innovation</li>
+              <li>Problem Solving</li>
+              <li>Team Collaboration</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section skills-section">
+  <div class="container">
+    <div class="section-label">
+      <span class="label-num">02</span>
+      <span class="label-text">Skills</span>
+    </div>
+
+    <h2 class="section-title">Technical <em>Stack</em></h2>
+
+    <div class="skills-grid">
+      <div class="skill-item" data-index="1">
+        <div class="skill-num">01</div>
+        <div class="skill-content">
+          <h3>Languages</h3>
+          <div class="skill-tags">
+            <span>Java</span>
+            <span>C</span>
+            <span>C++</span>
+            <span>OOP</span>
+            <span>DSA Basics</span>
+          </div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar" style="--fill:85%"></div>
+        </div>
+      </div>
+
+      <div class="skill-item" data-index="2">
+        <div class="skill-num">02</div>
+        <div class="skill-content">
+          <h3>Frontend</h3>
+          <div class="skill-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Responsive Design</span>
+            <span>UI Development</span>
+          </div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar" style="--fill:80%"></div>
+        </div>
+      </div>
+
+      <div class="skill-item" data-index="3">
+        <div class="skill-num">03</div>
+        <div class="skill-content">
+          <h3>Backend &amp; Logic</h3>
+          <div class="skill-tags">
+            <span>Algorithms</span>
+            <span>Problem Solving</span>
+            <span>File Handling</span>
+            <span>Data Structures</span>
+          </div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar" style="--fill:75%"></div>
+        </div>
+      </div>
+
+      <div class="skill-item" data-index="4">
+        <div class="skill-num">04</div>
+        <div class="skill-content">
+          <h3>Cloud</h3>
+          <div class="skill-tags">
+            <span>AWS S3</span>
+            <span>CloudFront</span>
+            <span>Deployment</span>
+            <span>Infrastructure</span>
+          </div>
+        </div>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar" style="--fill:70%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section projects-section">
+  <div class="container">
+    <div class="section-label">
+      <span class="label-num">03</span>
+      <span class="label-text">Projects</span>
+    </div>
+
+    <h2 class="section-title">Selected <em>Work</em></h2>
+
+    <div class="projects-list">
+
+      <div class="project-row" data-num="01">
+        <div class="project-meta">
+          <span class="project-badge live">Live</span>
+        </div>
+        <div class="project-info">
+          <h3>Cloud Portfolio Deployment</h3>
+          <p>Portfolio website deployed using cloud infrastructure — hosted on AWS S3 with CloudFront CDN for global delivery and low latency.</p>
+        </div>
+        <div class="project-tech">
+          <span>AWS S3</span>
+          <span>CloudFront</span>
+          <span>HTML</span>
+          <span>CSS</span>
+        </div>
+        <div class="project-arrow">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </div>
+
+      <div class="project-row" data-num="02">
+        <div class="project-meta">
+          <span class="project-badge">Project</span>
+        </div>
+        <div class="project-info">
+          <h3>Smart Inventory System</h3>
+          <p>Inventory tracking platform focused on stock monitoring and management, built with Java's object-oriented design patterns.</p>
+        </div>
+        <div class="project-tech">
+          <span>Java</span>
+          <span>Collections</span>
+          <span>OOP</span>
+        </div>
+        <div class="project-arrow">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </div>
+
+      <div class="project-row" data-num="03">
+        <div class="project-meta">
+          <span class="project-badge">Project</span>
+        </div>
+        <div class="project-info">
+          <h3>Student Analytics Platform</h3>
+          <p>Analytics platform for academic reporting, leveraging C++ and DSA concepts for efficient data processing and insight generation.</p>
+        </div>
+        <div class="project-tech">
+          <span>C++</span>
+          <span>DSA</span>
+          <span>Logic</span>
+        </div>
+        <div class="project-arrow">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <div class="section-label">
+      <span class="label-num">04</span>
+      <span class="label-text">Contact</span>
+    </div>
+
+    <div class="contact-inner">
+      <div class="contact-left">
+        <h2 class="section-title contact-title">Let's Build <em>Something<br>Amazing</em> Together</h2>
+        <p class="contact-sub">Open to collaboration, technology discussions, and learning opportunities.</p>
+        <div class="contact-location">
+          <i class="fa-solid fa-location-dot"></i>
+          Pune, Maharashtra, India
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <div class="social-stack">
+          <a href="mailto:arya.tambe5427@gmail.com" class="social-link">
+            <div class="social-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="social-info">
+              <span class="social-label">Email</span>
+              <span class="social-val">arya.tambe5427@gmail.com</span>
+            </div>
+            <i class="fa-solid fa-arrow-right social-arr"></i>
+          </a>
+
+          <a href="#" class="social-link">
+            <div class="social-icon"><i class="fa-brands fa-github"></i></div>
+            <div class="social-info">
+              <span class="social-label">GitHub</span>
+              <span class="social-val">github.com/arya</span>
+            </div>
+            <i class="fa-solid fa-arrow-right social-arr"></i>
+          </a>
+
+          <a href="#" class="social-link">
+            <div class="social-icon"><i class="fa-brands fa-linkedin"></i></div>
+            <div class="social-info">
+              <span class="social-label">LinkedIn</span>
+              <span class="social-val">Connect with me</span>
+            </div>
+            <i class="fa-solid fa-arrow-right social-arr"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-logo">AT</span>
+    <span class="footer-copy">© 2026 Arya Tambe · Crafted with care</span>
+    <span class="footer-city">Pune, India</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
