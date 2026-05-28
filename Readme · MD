@@ -111,7 +111,33 @@ https://dmvegacwyzlqf.cloudfront.net
 
 ---
 
-### 7. (Optional) Custom Domain via Route 53
+### 7. IAM — Least Privilege (Security Best Practice)
+Created a dedicated IAM user `portfolio-deployer` with only the required S3 permissions:
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject",
+        "s3:GetObject",
+        "s3:DeleteObject",
+        "s3:ListBucket"
+      ],
+      "Resource": [
+        "arn:aws:s3:::aryatambe-portfolio",
+        "arn:aws:s3:::aryatambe-portfolio/*"
+      ]
+    }
+  ]
+}
+```
+Used this user's credentials for CLI access instead of root account.
+
+---
+
+### 8. (Optional) Custom Domain via Route 53
 > *Skip this step if not using a custom domain.*
 1. Register or import domain in **Route 53**
 2. Request SSL certificate via **ACM** (AWS Certificate Manager) — `us-east-1` region required for CloudFront
@@ -120,7 +146,7 @@ https://dmvegacwyzlqf.cloudfront.net
 
 ---
 
-### 8. Verify Live Site
+### 9. Verify Live Site
 - Opened the CloudFront URL in browser
 - Confirmed HTTPS padlock is present
 - Checked all sections: Hero, About, Skills, Projects, Contact
