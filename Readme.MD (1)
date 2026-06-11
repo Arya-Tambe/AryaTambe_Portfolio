@@ -1,36 +1,43 @@
-# AryaTambe_Portfolio
+# CI/CD Automation for Dockerized Applications Using GitHub Actions
 
-## Cloud Computing & DevOps – Task 2
+## Project Overview
 
-### Containerization Using Docker and Deployment on AWS EC2
+This project demonstrates the implementation of a Continuous Integration and Continuous Deployment (CI/CD) pipeline for a Dockerized Portfolio Website using GitHub Actions and Docker Hub.
+
+The workflow automatically builds a Docker image and pushes it to Docker Hub whenever changes are pushed to the main branch.
 
 ---
 
 ## Objective
 
-The objective of this project is to containerize a static portfolio website using Docker and deploy it on an AWS EC2 virtual machine.
+The objective of this project is to automate the Docker image build and delivery process using GitHub Actions, ensuring faster, reliable, and consistent deployments.
+
+---
 
 ## Technologies Used
 
-- HTML5
-- CSS3
-- JavaScript
-- Docker
-- Nginx
-- Git & GitHub
-- AWS EC2 (Ubuntu Server)
+* GitHub
+* GitHub Actions
+* Docker
+* Docker Hub
+* Nginx
+
+---
 
 ## Project Structure
 
 ```text
 AryaTambe_Portfolio/
 │
+├── assets/
 ├── index.html
 ├── styles.css
 ├── script.js
-├── assets/
 ├── Dockerfile
-└── README.md
+├── README.md
+└── .github/
+    └── workflows/
+        └── docker-ci.yml
 ```
 
 ## Dockerfile
@@ -43,80 +50,64 @@ COPY . /usr/share/nginx/html
 EXPOSE 80
 ```
 
-## Step 1: Build Docker Image
+## CI/CD Workflow
 
-```bash
-docker build -t portfolio-website .
+The GitHub Actions workflow performs the following tasks:
+
+1. Triggers automatically on every push to the main branch.
+2. Checks out the source code from the repository.
+3. Logs in to Docker Hub using GitHub Secrets.
+4. Builds the Docker image.
+5. Pushes the image to Docker Hub.
+6. Makes the latest image available for deployment.
+
+---
+
+## GitHub Secrets
+
+The following repository secrets were used:
+
+* DOCKER_USERNAME
+* DOCKER_PASSWORD
+
+---
+
+## Docker Hub Repository
+
+```text
+aryatambe/portfolio-website
 ```
 
-## Step 2: Run Docker Container Locally
+Docker Image:
 
 ```bash
-docker run -d -p 8080:80 portfolio-website
-docker ps
+docker pull aryatambe/portfolio-website:latest
 ```
 
-Local URL:
+---
 
-http://localhost:8080
+## Workflow File
 
-## Step 3: GitHub Repository
-
-Repository:
-
-https://github.com/Arya-Tambe/AryaTambe_Portfolio
-
-## Step 4: AWS EC2 Configuration
-
-- Ubuntu Server 24.04 LTS (x86)
-- Instance Type: t3.micro
-- Auto-assigned Public IP Enabled
-- SSH Port 22 Allowed
-- HTTP Port 80 Allowed
-
-## Step 5: Install Docker on EC2
-
-```bash
-sudo apt update
-sudo apt install docker.io -y
-sudo systemctl start docker
-docker --version
+```text
+.github/workflows/docker-ci.yml
 ```
 
-## Step 6: Clone Repository
-
-```bash
-git clone https://github.com/Arya-Tambe/AryaTambe_Portfolio.git
-cd AryaTambe_Portfolio
-```
-
-## Step 7: Build Docker Image on EC2
-
-```bash
-sudo docker build -t portfolio-website .
-```
-
-## Step 8: Run Docker Container on EC2
-
-```bash
-sudo docker run -d -p 80:80 portfolio-website
-sudo docker ps
-```
-
-## Deployment URL
-
-AWS EC2 Public IP:
-
-http://15.206.66.146
+---
 
 ## Outcome
 
-The portfolio website was successfully containerized using Docker and deployed on AWS EC2. The website is accessible locally and through the EC2 public IP.
+Successfully implemented a CI/CD pipeline that:
+
+* Automates Docker image creation.
+* Pushes Docker images to Docker Hub automatically.
+* Reduces manual deployment effort.
+* Ensures deployment consistency.
+* Demonstrates real-world DevOps automation practices.
+
+---
 
 ## Author
 
-Arya Tambe
+**Arya Tambe**
 
-B.Tech Student – MIT ADT University
-
-Cloud Computing & Software Engineering
+Cloud Computing & DevOps Internship – Task 3
