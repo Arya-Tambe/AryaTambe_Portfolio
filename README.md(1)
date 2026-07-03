@@ -1,0 +1,197 @@
+# 🚀 Automated Deployment of Dockerized Portfolio Website on AWS EC2 using GitHub Actions
+
+## 📖 Project Overview
+
+This project demonstrates an end-to-end CI/CD pipeline for deploying a Dockerized Portfolio Website on an AWS EC2 instance using GitHub Actions. The deployment process is fully automated—every push to the `main` branch triggers GitHub Actions to build a Docker image, push it to Docker Hub, connect securely to the EC2 instance using SSH, pull the latest image, and deploy the updated application behind an Nginx Reverse Proxy.
+
+---
+
+## ✨ Features
+
+- Responsive Portfolio Website
+- Docker Containerization
+- AWS EC2 Deployment
+- Nginx Reverse Proxy Configuration
+- Automated CI/CD Pipeline using GitHub Actions
+- Docker Hub Integration
+- Secure SSH Key Authentication
+- Automatic Deployment on Every Git Push
+
+---
+
+## 🛠️ Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- Docker
+- Docker Hub
+- Git & GitHub
+- GitHub Actions
+- AWS EC2 (Ubuntu)
+- Nginx
+- Linux
+- SSH
+
+---
+
+## 📁 Project Structure
+
+```
+Portfolio/
+│
+├── assets/
+├── index.html
+├── styles.css
+├── script.js
+├── Dockerfile
+├── README.md
+└── .github/
+    └── workflows/
+        └── docker-ci.yml
+```
+
+---
+
+## ⚙️ CI/CD Workflow
+
+```
+Developer
+     │
+     ▼
+Push Code to GitHub
+     │
+     ▼
+GitHub Actions
+     │
+     ├── Checkout Source Code
+     ├── Build Docker Image
+     ├── Push Image to Docker Hub
+     └── SSH into AWS EC2
+              │
+              ▼
+      Pull Latest Docker Image
+              │
+              ▼
+      Stop Old Container
+              │
+              ▼
+      Start New Container
+              │
+              ▼
+      Nginx Reverse Proxy
+              │
+              ▼
+      Live Portfolio Website
+```
+
+---
+
+## 🔐 GitHub Secrets Used
+
+The following repository secrets were configured for secure deployment:
+
+- `DOCKER_USERNAME`
+- `DOCKER_PASSWORD`
+- `VM_HOST`
+- `VM_USER`
+- `VM_SSH_KEY`
+
+---
+
+## 🐳 Docker Commands Used
+
+### Build Docker Image
+
+```bash
+docker build -t portfolio-website .
+```
+
+### Run Docker Container
+
+```bash
+docker run -d -p 8080:80 portfolio-website
+```
+
+### List Running Containers
+
+```bash
+docker ps
+```
+
+### Stop Container
+
+```bash
+docker stop app
+```
+
+### Remove Container
+
+```bash
+docker rm app
+```
+
+---
+
+## ☁️ Deployment Process
+
+1. Developed a responsive portfolio website.
+2. Created a Dockerfile for containerization.
+3. Built and tested the Docker image locally.
+4. Pushed the Docker image to Docker Hub.
+5. Launched an AWS EC2 Ubuntu instance.
+6. Installed Docker and Nginx on the EC2 instance.
+7. Configured Nginx as a reverse proxy.
+8. Generated SSH keys for secure authentication.
+9. Configured GitHub Secrets.
+10. Created a GitHub Actions workflow.
+11. Enabled automatic deployment after every push to the `main` branch.
+
+---
+
+## 🌐 Project Links
+
+### 🔗 GitHub Repository
+
+https://github.com/Arya-Tambe/AryaTambe_Portfolio
+
+### 🐳 Docker Hub Repository
+
+https://hub.docker.com/r/aryatambe/portfolio-website
+
+### 🌍 Live Application
+
+http://15.206.66.146
+
+---
+
+## 📸 Project Output
+
+- Successfully Dockerized the Portfolio Website.
+- Deployed the application on AWS EC2.
+- Configured Nginx as a Reverse Proxy.
+- Implemented CI/CD using GitHub Actions.
+- Automated deployment after every GitHub push.
+- Hosted the application successfully on a cloud server.
+
+---
+
+## 🎯 Learning Outcomes
+
+- Docker Containerization
+- AWS EC2 Instance Management
+- Linux Server Administration
+- Nginx Reverse Proxy Configuration
+- GitHub Actions CI/CD
+- Docker Hub Image Management
+- SSH Key Authentication
+- Continuous Deployment Automation
+
+---
+
+## 👩‍💻 Author
+
+**Arya Tambe**
+
+B.Tech Computer Science & Engineering (Cloud Computing)
+
